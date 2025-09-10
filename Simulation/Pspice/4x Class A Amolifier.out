@@ -1,0 +1,235 @@
+
+**** 03/09/25 21:55:57 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\Study\Books\3rd Semester\EEE 311\Project\Try 2\Pspice\4x Class A Amolifier.sch
+
+
+ ****     CIRCUIT DESCRIPTION
+
+
+******************************************************************************
+
+
+
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Mar 09 21:55:53 2025
+
+
+
+** Analysis setup **
+.ac OCT 10 1 10000K
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "4x Class A Amolifier.net"
+
+**** INCLUDING "4x Class A Amolifier.net" ****
+* Schematics Netlist *
+
+
+
+Q_Q1         $N_0002 $N_0001 $N_0003 Q2N3904
+Q_Q2         $N_0005 $N_0004 $N_0006 Q2N3904
+Q_Q3         $N_0008 $N_0007 $N_0009 Q2N3904
+R_R2         $N_0011 $N_0010  100k  
+R_R1         $N_0012 $N_0010  5.6k  
+R_R3         $N_0001 $N_0010  100k  
+R_R5         $N_0004 $N_0010  100k  
+R_R8         $N_0007 $N_0010  100k  
+R_R4         $N_0002 $N_0010  5.6k  
+R_R6         $N_0005 $N_0010  5.6k  
+R_R7         $N_0008 $N_0010  5.6k  
+C_C3         $N_0002 $N_0004  10u  
+C_C4         $N_0005 $N_0007  10u  
+C_C2         $N_0012 $N_0001  10u  
+Q_Q4         $N_0012 $N_0011 $N_0013 Q2N3904
+V_V2         $N_0010 0 12V
+R_R12         0 $N_0007  18k  
+R_R9         0 $N_0006  1k  
+R_R11         0 $N_0009  1k  
+R_R10         0 $N_0004  18k  
+R_R13         0 $N_0003  1k  
+R_R14         0 $N_0001  18k  
+R_R15         0 $N_0013  1k  
+R_R16         0 $N_0011  18k  
+C_C5         $N_0008 $N_0014  10u  
+C_C1         $N_0015 $N_0011  10u  
+R_load         0 $N_0014  100k  
+V_Source         $N_0015 0 DC 0V AC 0.01V 
+
+**** RESUMING "4x Class A Amolifier.cir" ****
+.INC "4x Class A Amolifier.als"
+
+
+
+**** INCLUDING "4x Class A Amolifier.als" ****
+* Schematics Aliases *
+
+.ALIASES
+Q_Q1            Q1(c=$N_0002 b=$N_0001 e=$N_0003 )
+Q_Q2            Q2(c=$N_0005 b=$N_0004 e=$N_0006 )
+Q_Q3            Q3(c=$N_0008 b=$N_0007 e=$N_0009 )
+R_R2            R2(1=$N_0011 2=$N_0010 )
+R_R1            R1(1=$N_0012 2=$N_0010 )
+R_R3            R3(1=$N_0001 2=$N_0010 )
+R_R5            R5(1=$N_0004 2=$N_0010 )
+R_R8            R8(1=$N_0007 2=$N_0010 )
+R_R4            R4(1=$N_0002 2=$N_0010 )
+R_R6            R6(1=$N_0005 2=$N_0010 )
+R_R7            R7(1=$N_0008 2=$N_0010 )
+C_C3            C3(1=$N_0002 2=$N_0004 )
+C_C4            C4(1=$N_0005 2=$N_0007 )
+C_C2            C2(1=$N_0012 2=$N_0001 )
+Q_Q4            Q4(c=$N_0012 b=$N_0011 e=$N_0013 )
+V_V2            V2(+=$N_0010 -=0 )
+R_R12           R12(1=0 2=$N_0007 )
+R_R9            R9(1=0 2=$N_0006 )
+R_R11           R11(1=0 2=$N_0009 )
+R_R10           R10(1=0 2=$N_0004 )
+R_R13           R13(1=0 2=$N_0003 )
+R_R14           R14(1=0 2=$N_0001 )
+R_R15           R15(1=0 2=$N_0013 )
+R_R16           R16(1=0 2=$N_0011 )
+C_C5            C5(1=$N_0008 2=$N_0014 )
+C_C1            C1(1=$N_0015 2=$N_0011 )
+R_load          load(1=0 2=$N_0014 )
+V_Source          Source(+=$N_0015 -=0 )
+.ENDALIASES
+
+
+**** RESUMING "4x Class A Amolifier.cir" ****
+.probe
+
+
+.END
+
+**** 03/09/25 21:55:57 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\Study\Books\3rd Semester\EEE 311\Project\Try 2\Pspice\4x Class A Amolifier.sch
+
+
+ ****     BJT MODEL PARAMETERS
+
+
+******************************************************************************
+
+
+
+
+               Q2N3904         
+               NPN             
+          IS    6.734000E-15 
+          BF  416.4          
+          NF    1            
+         VAF   74.03         
+         IKF     .06678      
+         ISE    6.734000E-15 
+          NE    1.259        
+          BR     .7371       
+          NR    1            
+          RB   10            
+          RC    1            
+         CJE    4.493000E-12 
+         MJE     .2593       
+         CJC    3.638000E-12 
+         MJC     .3085       
+          TF  301.200000E-12 
+         XTF    2            
+         VTF    4            
+         ITF     .4          
+          TR  239.500000E-09 
+         XTB    1.5          
+          CN    2.42         
+           D     .87         
+
+
+**** 03/09/25 21:55:57 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\Study\Books\3rd Semester\EEE 311\Project\Try 2\Pspice\4x Class A Amolifier.sch
+
+
+ ****     SMALL SIGNAL BIAS SOLUTION       TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+ NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE     NODE   VOLTAGE
+
+
+($N_0001)    1.7171                   ($N_0002)    6.1519                       
+
+($N_0003)    1.0517                   ($N_0004)    1.7171                       
+
+($N_0005)    6.1519                   ($N_0006)    1.0517                       
+
+($N_0007)    1.7171                   ($N_0008)    6.1519                       
+
+($N_0009)    1.0517                   ($N_0010)   12.0000                       
+
+($N_0011)    1.7171                   ($N_0012)    6.1519                       
+
+($N_0013)    1.0517                   ($N_0014)    0.0000                       
+
+($N_0015)    0.0000                   
+
+
+
+
+    VOLTAGE SOURCE CURRENTS
+    NAME         CURRENT
+
+    V_V2        -4.589E-03
+    V_Source     0.000E+00
+
+    TOTAL POWER DISSIPATION   5.51E-02  WATTS
+
+
+**** 03/09/25 21:55:57 *********** Evaluation PSpice (Nov 1999) **************
+
+ * D:\Study\Books\3rd Semester\EEE 311\Project\Try 2\Pspice\4x Class A Amolifier.sch
+
+
+ ****     OPERATING POINT INFORMATION      TEMPERATURE =   27.000 DEG C
+
+
+******************************************************************************
+
+
+
+
+
+
+**** BIPOLAR JUNCTION TRANSISTORS
+
+
+NAME         Q_Q1        Q_Q2        Q_Q3        Q_Q4      
+MODEL        Q2N3904     Q2N3904     Q2N3904     Q2N3904   
+IB           7.43E-06    7.43E-06    7.43E-06    7.43E-06 
+IC           1.04E-03    1.04E-03    1.04E-03    1.04E-03 
+VBE          6.65E-01    6.65E-01    6.65E-01    6.65E-01 
+VBC         -4.43E+00   -4.43E+00   -4.43E+00   -4.43E+00 
+VCE          5.10E+00    5.10E+00    5.10E+00    5.10E+00 
+BETADC       1.41E+02    1.41E+02    1.41E+02    1.41E+02 
+GM           3.98E-02    3.98E-02    3.98E-02    3.98E-02 
+RPI          4.04E+03    4.04E+03    4.04E+03    4.04E+03 
+RX           1.00E+01    1.00E+01    1.00E+01    1.00E+01 
+RO           7.51E+04    7.51E+04    7.51E+04    7.51E+04 
+CBE          1.84E-11    1.84E-11    1.84E-11    1.84E-11 
+CBC          2.00E-12    2.00E-12    2.00E-12    2.00E-12 
+CJS          0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+BETAAC       1.61E+02    1.61E+02    1.61E+02    1.61E+02 
+CBX/CBX2     0.00E+00    0.00E+00    0.00E+00    0.00E+00 
+FT/FT2       3.10E+08    3.10E+08    3.10E+08    3.10E+08 
+
+
+
+          JOB CONCLUDED
+
+          TOTAL JOB TIME             .05
+

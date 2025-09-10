@@ -1,0 +1,23 @@
+* D:\Study\Books\3rd Semester\EEE 311\Project\Try 2\Pspice\4x Class A Amolifier.sch
+
+* Schematics Version 9.1 - Web Update 1
+* Sun Mar 09 21:55:53 2025
+
+
+
+** Analysis setup **
+.ac OCT 10 1 10000K
+.OP 
+
+
+* From [PSPICE NETLIST] section of pspiceev.ini:
+.lib "nom.lib"
+
+.INC "4x Class A Amolifier.net"
+.INC "4x Class A Amolifier.als"
+
+
+.probe
+
+
+.END
